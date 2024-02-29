@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.container-wrapper{
+    /* margin: 0;
+    padding: 0; */
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  
+}
+.container-wrapper::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./neda-astani-KWTkd7mHqKE-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    filter: blur(8px); /* Apply blur effect */
+    z-index: -1; /* Move behind other content */
+}
+.main-header{
+    text-align: center;
+}
+.container{
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    /* margin: 100px auto; */
+    padding: 40px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -1px 2px 2px 8px;
+    background: url("./img-1.avif");
+    background-size: cover;
+    z-index: 1;
+}
+
+.inputs{
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+    justify-content: center;
+    /* background-color: rgb(224, 190, 190); */
+    
+    height: 150px;
+    border-radius: 5px;
+}
+
+/* City name area */
+.inputs input[type="text"] {
+    height: 4rem;
+    width: 20rem;
+    background-color: rgba(85, 183, 175, 0.1);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    /* background-color: transparent; */
+    border: 2px solid #473939;
+    border-radius: 15px;
+    margin-right: 4px;
+}
+
+/* submit button */
+.inputs input[type="submit"] {
+    height: 3rem;
+    width: 6rem;
+    background: #270aca;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+}
+/* display area */
+.display{
+    text-align: center;
+    width: 520px;
+    /* color: green; */
+}
+
+/* inner display area */
+.wrapper{
+    margin: 0 9rem;
+    background-color: rgba(85, 183, 175, 0.3);
+    height: 45vh;
+    margin: 30px auto;
+    border-radius: 5px;
+}
+
+/* city name */
+.wrapper h2{
+    padding: 5px 0;
+    text-align: center;
+    background: inherit;
+    color: black;
+}
+
+/* weather details */
+.wrapper p{
+    margin: 20px 50px;
+    /* margin-right: 20px; */
+    text-align: center;
+    color: #04214c;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+/* highlighted text in city name */
+.wrapper h2 span{
+    font-size: 26px;
+    color: #0d00ff;
+}
+
+/* highlighted text in details */
+.wrapper p span{
+    font-size: 26px;
+    color: white;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+    }
+    .display {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .wrapper{
+        width: 100%;
+    }
+}
